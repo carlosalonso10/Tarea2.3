@@ -22,16 +22,13 @@ public class activity_listview extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         databaseHelper = new DatabaseHelper(this);
 
-        // Obtener datos de la base de datos
         ArrayList<Photograph> photographs = (ArrayList<Photograph>) databaseHelper.getAllPhotographs();
 
-        // Configurar el adaptador
         adapter = new CustomAdapter(this, photographs);
         listView.setAdapter(adapter);
 
-        // Configurar el clic en un elemento de la lista
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            // Obtener la fotografía seleccionada
+
             Photograph selectedPhotograph = (Photograph) parent.getItemAtPosition(position);
 
 

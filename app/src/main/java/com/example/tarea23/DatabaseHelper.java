@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Método para insertar una fotografía en la base de datos
+
     public long insertPhotograph(byte[] image, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -50,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    // Método para obtener todas las fotografías almacenadas en la base de datos
+
     public List<Photograph> getAllPhotographs() {
         List<Photograph> photographs = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

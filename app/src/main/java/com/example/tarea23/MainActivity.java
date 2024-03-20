@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private EditText descriptionEditText;
     private Button captureButton;
-    private Button saveButton; // Botón para guardar la foto y la descripción
-    private Button listButton; // Botón para mostrar la lista de fotos
+    private Button saveButton;
+    private Button listButton;
 
     private DatabaseHelper databaseHelper;
     private String currentPhotoPath;
@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.placeholder_image);
         descriptionEditText = findViewById(R.id.descriptionEditText);
         captureButton = findViewById(R.id.captureButton);
-        saveButton = findViewById(R.id.saveButton); // Enlaza el botón de guardar
-        listButton = findViewById(R.id.listButton); // Enlaza el botón de la lista
-
+        saveButton = findViewById(R.id.saveButton);
+        listButton = findViewById(R.id.listButton);
         databaseHelper = new DatabaseHelper(this);
 
         captureButton.setOnClickListener(new View.OnClickListener() {
